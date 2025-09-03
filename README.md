@@ -5,54 +5,54 @@
 ```mermaid
 graph TB
     %% User Interface Layer
-    subgraph "👤 User Interface Layer"
-        A[🧑‍💻 User<br/>Nhập câu hỏi về thuốc]
-        B[📱 React Frontend<br/>Giao diện người dùng]
+    subgraph UserLayer["👤 User Interface Layer"]
+        A["🧑‍💻 User<br/>Nhập câu hỏi về thuốc"]
+        B["📱 React Frontend<br/>Giao diện người dùng"]
     end
     
     %% API Gateway Layer  
-    subgraph "🌐 API Gateway Layer"
-        C[🔗 Django REST API<br/>ChatBotView Endpoint]
-        D[🛡️ Security Layer<br/>- Rate Limiting<br/>- Input Validation<br/>- API Authentication]
+    subgraph APILayer["🌐 API Gateway Layer"]
+        C["🔗 Django REST API<br/>ChatBotView Endpoint"]
+        D["🛡️ Security Layer<br/>Rate Limiting<br/>Input Validation<br/>API Authentication"]
     end
     
     %% Business Logic Layer
-    subgraph "🧠 Business Logic Layer"
-        E{🔍 Question Analysis<br/>Phân tích câu hỏi}
-        F[🎯 Specific Question<br/>VD: "Espumisan có công dụng gì?"]
-        G[🔍 General Question<br/>VD: "Tôi đau bụng"]
-        H[💊 Medicine Search Service<br/>Tìm kiếm thuốc thông minh]
+    subgraph BusinessLayer["🧠 Business Logic Layer"]
+        E{"🔍 Question Analysis<br/>Phân tích câu hỏi"}
+        F["🎯 Specific Question<br/>VD: Espumisan có công dụng gì"]
+        G["🔍 General Question<br/>VD: Tôi đau bụng"]
+        H["💊 Medicine Search Service<br/>Tìm kiếm thuốc thông minh"]
     end
     
     %% Data Layer
-    subgraph "🗄️ Data Layer"
-        I[(📊 MySQL Database<br/>- Thông tin thuốc<br/>- Giá cả & Cách dùng<br/>- Lưu ý & Tác dụng phụ)]
-        J[📈 Performance Optimization<br/>- Select Related<br/>- Query Cache<br/>- Index Optimization]
+    subgraph DataLayer["🗄️ Data Layer"]
+        I[("📊 MySQL Database<br/>Thông tin thuốc<br/>Giá cả và Cách dùng<br/>Lưu ý và Tác dụng phụ")]
+        J["📈 Performance Optimization<br/>Select Related<br/>Query Cache<br/>Index Optimization"]
     end
     
     %% AI Processing Layer
-    subgraph "🤖 AI Processing Layer"
-        K[🧠 OpenAI Service<br/>GPT-3.5-turbo Integration]
-        L[⚙️ Optimized Configuration<br/>- Model: gpt-3.5-turbo<br/>- Max tokens: 300<br/>- Temperature: 1.0<br/>- Cost reduction: 85-90%]
-        M[📝 Prompt Engineering<br/>- Smart response format<br/>- Context understanding<br/>- Header formatting]
+    subgraph AILayer["🤖 AI Processing Layer"]
+        K["🧠 OpenAI Service<br/>GPT-3.5-turbo Integration"]
+        L["⚙️ Optimized Configuration<br/>Model: gpt-3.5-turbo<br/>Max tokens: 300<br/>Temperature: 1.0<br/>Cost reduction: 85-90%"]
+        M["📝 Prompt Engineering<br/>Smart response format<br/>Context understanding<br/>Header formatting"]
     end
     
     %% Response Processing
-    subgraph "📤 Response Processing"
-        N{📋 Response Type}
-        O[📄 Single Section Response<br/>Chỉ trả về 1 phần<br/>VD: "Công dụng"]
-        P[📚 Complete Response<br/>4 sections đầy đủ<br/>- Công dụng<br/>- Giá cả<br/>- Cách dùng<br/>- Lưu ý]
-        Q[✅ JSON Formatter<br/>Format response đẹp]
+    subgraph ResponseLayer["📤 Response Processing"]
+        N{"📋 Response Type"}
+        O["📄 Single Section Response<br/>Chỉ trả về 1 phần<br/>VD: Công dụng"]
+        P["📚 Complete Response<br/>4 sections đầy đủ<br/>Công dụng<br/>Giá cả<br/>Cách dùng<br/>Lưu ý"]
+        Q["✅ JSON Formatter<br/>Format response đẹp"]
     end
     
     %% Error Handling
-    subgraph "⚠️ Error Handling"
-        R[🔧 Error Manager<br/>- OpenAI timeout<br/>- Database errors<br/>- Fallback responses]
+    subgraph ErrorLayer["⚠️ Error Handling"]
+        R["🔧 Error Manager<br/>OpenAI timeout<br/>Database errors<br/>Fallback responses"]
     end
     
     %% Performance Metrics
-    subgraph "📊 Performance Metrics"
-        S[⚡ System Performance<br/>- Response time: 2-3s<br/>- Accuracy: 95%+<br/>- Cost savings: 85-90%<br/>- High user satisfaction]
+    subgraph MetricsLayer["📊 Performance Metrics"]
+        S["⚡ System Performance<br/>Response time: 2-3s<br/>Accuracy: 95%+<br/>Cost savings: 85-90%<br/>High user satisfaction"]
     end
     
     %% Flow connections
@@ -85,14 +85,14 @@ graph TB
     Q -.-> S
     
     %% Styling
-    classDef userLayer fill:#e3f2fd,stroke:#1976d2,stroke-width:3px,color:#000
-    classDef apiLayer fill:#f3e5f5,stroke:#7b1fa2,stroke-width:3px,color:#000
-    classDef businessLayer fill:#e8f5e8,stroke:#388e3c,stroke-width:3px,color:#000
-    classDef dataLayer fill:#fff3e0,stroke:#f57c00,stroke-width:3px,color:#000
-    classDef aiLayer fill:#fce4ec,stroke:#c2185b,stroke-width:3px,color:#000
-    classDef responseLayer fill:#f1f8e9,stroke:#689f38,stroke-width:3px,color:#000
-    classDef errorLayer fill:#ffebee,stroke:#d32f2f,stroke-width:3px,color:#000
-    classDef metricsLayer fill:#f9fbe7,stroke:#827717,stroke-width:3px,color:#000
+    classDef userLayer fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
+    classDef apiLayer fill:#f3e5f5,stroke:#7b1fa2,stroke-width:3px
+    classDef businessLayer fill:#e8f5e8,stroke:#388e3c,stroke-width:3px
+    classDef dataLayer fill:#fff3e0,stroke:#f57c00,stroke-width:3px
+    classDef aiLayer fill:#fce4ec,stroke:#c2185b,stroke-width:3px
+    classDef responseLayer fill:#f1f8e9,stroke:#689f38,stroke-width:3px
+    classDef errorLayer fill:#ffebee,stroke:#d32f2f,stroke-width:3px
+    classDef metricsLayer fill:#f9fbe7,stroke:#827717,stroke-width:3px
     
     class A,B userLayer
     class C,D apiLayer
@@ -116,7 +116,7 @@ sequenceDiagram
     participant AI as 🤖 OpenAI
     participant ER as ⚠️ Error Handler
     
-    U->>F: Nhập câu hỏi "Espumisan có công dụng gì?"
+    U->>F: Nhập câu hỏi về thuốc
     F->>API: POST /api/chatbot/
     API->>API: Validate input & security check
     
@@ -150,6 +150,33 @@ sequenceDiagram
     Note over U,ER: ⚡ Total time: 2-3 seconds<br/>💰 Cost: 85-90% reduction<br/>🎯 Accuracy: 95%+
 ```
 
+## Sơ đồ Luồng Xử Lý Đơn Giản
+
+```mermaid
+flowchart LR
+    A[👤 User Input] --> B[🔍 Question Analysis]
+    B --> C{Question Type?}
+    C -->|Specific| D[🎯 Single Medicine Search]
+    C -->|General| E[🔍 Multiple Medicine Search]
+    D --> F[🗄️ Database Query]
+    E --> F
+    F --> G[🤖 OpenAI Processing]
+    G --> H[📝 Response Generation]
+    H --> I[✅ JSON Response]
+    I --> J[📱 Display Result]
+    
+    style A fill:#e3f2fd
+    style B fill:#f3e5f5
+    style C fill:#fff3e0
+    style D fill:#e8f5e8
+    style E fill:#e8f5e8
+    style F fill:#fff3e0
+    style G fill:#fce4ec
+    style H fill:#f1f8e9
+    style I fill:#f1f8e9
+    style J fill:#e3f2fd
+```
+
 ## Tối Ưu Hóa Hiệu Suất
 
 | Metric | Before | After | Improvement |
@@ -160,9 +187,11 @@ sequenceDiagram
 | **Cost per Request** | $0.03 | $0.003 | 90% cheaper |
 | **Accuracy** | 98% | 95%+ | Maintained quality |
 
-## API Endpoints
+## API Documentation
 
-### POST /api/chatbot/
+### Endpoint: POST /api/chatbot/
+
+**Request:**
 ```json
 {
   "question": "Espumisan có công dụng gì?",
@@ -170,15 +199,36 @@ sequenceDiagram
 }
 ```
 
-### Response Format
+**Response - Câu hỏi cụ thể:**
 ```json
 {
   "success": true,
   "data": {
     "question_type": "specific",
-    "response": "**Công dụng:** Espumisan được sử dụng để...",
+    "response": "**Công dụng:** Espumisan được sử dụng để điều trị...",
     "medicine_found": "Espumisan",
     "response_time": "2.3s"
   }
 }
 ```
+
+**Response - Câu hỏi tổng quát:**
+```json
+{
+  "success": true,
+  "data": {
+    "question_type": "general",
+    "response": "**Công dụng:** ...\n\n**Giá cả:** ...\n\n**Cách dùng:** ...\n\n**Lưu ý:** ...",
+    "medicines_found": ["Medicine A", "Medicine B"],
+    "response_time": "2.8s"
+  }
+}
+```
+
+## Kết Quả Đạt Được
+
+✅ **Hiệu suất cao** - Response nhanh, chính xác  
+✅ **Chi phí thấp** - Tối ưu 85-90% so với GPT-4  
+✅ **Logic thông minh** - Hiểu context và trả lời phù hợp  
+✅ **Production ready** - Đầy đủ error handling, security  
+✅ **User-friendly** - Response format đẹp, dễ đọc  
