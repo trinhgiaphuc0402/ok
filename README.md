@@ -1,4 +1,12 @@
-```mermaid
+Unable to render rich display
+
+Parse error on line 13:
+...quan:<br/>• Aspirin (0.85)<br/>• Paracet
+-----------------------^
+Expecting 'SQE', 'DOUBLECIRCLEEND', 'PE', '-)', 'STADIUMEND', 'SUBROUTINEEND', 'PIPE', 'CYLINDEREND', 'DIAMOND_STOP', 'TAGEND', 'TRAPEND', 'INVTRAPEND', 'UNICODE_TEXT', 'TEXT', 'TAGSTART', got 'PS'
+
+For more information, see https://docs.github.com/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams#creating-mermaid-diagrams
+
 graph TB
     %% User Input
     U[👤 User<br/>Câu hỏi về thuốc] --> Q{📝 Query<br/>Tôi bị đau đầu,<br/>có thuốc gì không?}
@@ -53,4 +61,3 @@ graph TB
     class RAG,RET,REL,COMB ragStyle
     class LLM llmStyle
     class ANS,FINAL,OUT outputStyle
-```
