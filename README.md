@@ -43,14 +43,4 @@ end
 
 ANS --> FINAL
 FINAL --> OUT[📱 Output<br/>React Frontend<br/>Hiển thị tư vấn + danh sách thuốc]
-
-%% Styling
-classDef userStyle fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-classDef ragStyle fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
-classDef llmStyle fill:#fff3e0,stroke:#e65100,stroke-width:2px
-classDef outputStyle fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
-
-class U,Q userStyle
-class RAG,RET,REL,COMB ragStyle
-class LLM llmStyle
-class ANS,FINAL,OUT outputStyle
+```
