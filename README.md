@@ -1,11 +1,12 @@
 graph TB
+
 %% User Input
 U[👤 User<br/>Câu hỏi về thuốc] --> Q{📝 Query<br/>Tôi bị đau đầu,<br/>có thuốc gì không?}
 
 %% RAG Process Box
 subgraph RAG ["🤖 RAG Chatbot Service"]
     direction TB
-    
+
     %% Indexing Section
     subgraph IDX ["📚 Indexing"]
         direction TB
@@ -14,13 +15,13 @@ subgraph RAG ["🤖 RAG Chatbot Service"]
         EMB[🧠 Embeddings<br/>Vector Cache<br/>384-dimensional]
         DOC --> CHUNK --> EMB
     end
-    
+
     %% Retrieval Section
     RET[🔍 Retrieval<br/>Hybrid Search:<br/>Exact Match + Semantic Search<br/>Cosine Similarity ≥ 0.3]
-    
+
     %% Relevant Documents
     REL[📋 Relevant Documents<br/>Top 5 thuốc liên quan:<br/>Aspirin (0.85)<br/>Paracetamol (0.72)<br/>Ibuprofen (0.68)]
-    
+
     EMB --> RET
     RET --> REL
 end
