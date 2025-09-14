@@ -1,3 +1,4 @@
+```mermaid
 flowchart LR
   classDef client fill:#f7fbff,stroke:#60a5fa,stroke-width:1px;
   classDef backend fill:#0f172a,stroke:#111827,stroke-width:1px,color:#fff;
