@@ -13,7 +13,7 @@ subgraph RAG ["🤖 RAG Chatbot Service"]
         direction TB
         DOC1[📄 Documents<br/>Multidatabase Medicine Data]
         DOC2[📄 Documents<br/>MySQL Database Medicine Data]
-        EMB[🧠 Embeddings<br/>Vector Cache (384-dimensional)]
+        EMB[🧠 Embeddings<br/>Vector Cache<br/>384 dimensional]
         MODEL[🔤 SentenceTransformer<br/>paraphrase-multilingual-MiniLM-L12-v2]
         DOC1 --> EMB
         DOC2 --> EMB
